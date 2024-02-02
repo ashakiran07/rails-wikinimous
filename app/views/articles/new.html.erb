@@ -1,0 +1,21 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container">
+    <!-- Navbar brand link -->
+    <%= link_to "Wikinimous", root_path, class: "navbar-brand" %>
+
+    <!-- Navbar links -->
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <%= link_to "New Article", new_article_path, class: "nav-link" %>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+  <h1>New Article</h1>
+  <%= render 'form', article: @article %>
+  <%= link_to 'Back', articles_path %>
+</div>
